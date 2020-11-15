@@ -57,7 +57,7 @@ const UserSchema = new mongoose.Schema({
 );
 
 UserSchema.virtual('avatar_url').get(function() {
-    return `http://localhost:3333/files/${this.avatar}`
+    return `https://weblab-backend.herokuapp.com/files/${this.avatar}`
   })
 
 UserSchema.pre('save', async function(next) {

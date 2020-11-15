@@ -33,7 +33,7 @@ const ContentSchema = new mongoose.Schema({
 ContentSchema.virtual('source_url').get(function() {
 
         if(this.type != "text")
-            return `http://localhost:3333/files/${this.source}`
+            return `https://weblab-backend.herokuapp.com/files/${this.source}`
         else
             return `${this.source}`
 

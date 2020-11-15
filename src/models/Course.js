@@ -47,7 +47,7 @@ const CourseSchema = new mongoose.Schema({
 
 
 CourseSchema.virtual('thumbnail_url').get(function() {
-    return `http://localhost:3333/files/${this.thumbnail}`
+    return `https://weblab-backend.herokuapp.com/files/${this.thumbnail}`
   })
 
 module.exports = mongoose.model("Course", CourseSchema);
